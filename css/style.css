@@ -59,6 +59,10 @@ h1 {
   padding: 8px 0;
 }
 
+p.strong{
+  font-weight: bold;
+}
+
 #info {
   background-color: teal;
   padding: 10px 0;
@@ -68,6 +72,8 @@ h1 {
 #Qualifications {
   padding: 16px 0;
 }
+
+
 
 
 
