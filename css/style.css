@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+   in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%
+}
+
+body {
+  background-color: black;
+/* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: 300px;
+  background-color: white;
+  font-size: 2rem;
+  text-align: center;
+  border: dotted #ff017f;
+}
+
+img {
+  border-radius: 50px;
+  border: #ff017f 4px solid;
+}
+
+#status {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff017f;
+  margin: 20px;
+}
+
+h1, p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  padding: 8px 0;
+}
+
+#info {
+  background-color: teal;
+  padding: 10px 0;
+}
+
+
+#Qualifications {
+  padding: 16px 0;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 750px) {
+  main {
+    display: grid;
+    text-align: left;
+    width: 600px;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+      "status name"
+      "img occupation"
+      "img About" 
+      
+  }
+
+  #status {
+    text-align: center;
+    padding: 10px 0 0 20px;
+  }
+
+  img {
+    grid-area: img;
+    margin: 0 auto;
+  }
+
+  #Qualifications > p {
+    border-left: #ff017f 4px solid;
+    padding: 0 20px 0 8px;
+    font-size: 1.6rem;
+  }
+
+  #Qualifications {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  #name,#info, #Qualifications {
+    padding-left: 20px;
+    background-color: teal;
+  }
+}
